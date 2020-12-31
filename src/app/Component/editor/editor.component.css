@@ -1,0 +1,15 @@
+.mainSection{
+/* background-color: red; */
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 57px;
+
+}       
+.button{
+    background-color: #88a9e2;
+    border-radius: 10px;
+    height: 41px;
+    margin: 20px
+}

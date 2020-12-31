@@ -1,0 +1,32 @@
+<!-- <form role="form" #myForm="ngForm"> -->
+<div [innerHTML]="data" class="mainSection" *ngIf="toggle==true"></div>
+<!-- <p>{{ckeditorContent}}</p> -->
+<ckeditor [(ngModel)]="ckeditorContent">
+    <!-- <ckbutton [name]="'saveButton'"
+      [command]="'saveCmd'"
+      (click)="save($event)"
+      [icon]="'save.png'"
+      [label]="'Save Document'"
+      [toolbar]="'clipboard,1'">
+    </ckbutton> -->
+</ckeditor>
+<button *ngIf="ckeditorContent!=''"  class="button" (click)="clickButton()">Submit</button>
+<!-- </form> -->
+<!-- <div id="editor">
+	<p>This is the editor content.</p>
+</div> -->
+<!-- <div id="editor">
+	<p>This is the editor content.</p>
+</div>
+<script src="./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+<script>
+	ClassicEditor
+		.create( document.querySelector( '#editor' ) )
+		.then( editor => {
+			window.editor = editor;
+		} )
+		.catch( error => {
+			console.error( 'There was a problem initializing the editor.', error );
+		} );
+</script> -->
+<!-- <ckeditor [(ngModel)]="editor" [config]="config" ></ckeditor> -->
