@@ -1,16 +1,19 @@
-<!-- <form role="form" #myForm="ngForm"> -->
+<!-- ****It shows the text after click on submit button -->
 <div [innerHTML]="data" class="mainSection" *ngIf="toggle==true"></div>
-<!-- <p>{{ckeditorContent}}</p> -->
+<!-- ****Display the editor -->
 <ckeditor [(ngModel)]="ckeditorContent">
-    <!-- <ckbutton [name]="'saveButton'"
+</ckeditor>
+<!-- ****Shows the Submit Button after click on it, it shows text which enter in text editor -->
+<button *ngIf="ckeditorContent!=''" class="button" (click)="clickButton()">Submit</button>
+<!-- <ckbutton [name]="'saveButton'"
       [command]="'saveCmd'"
       (click)="save($event)"
       [icon]="'save.png'"
       [label]="'Save Document'"
       [toolbar]="'clipboard,1'">
     </ckbutton> -->
-</ckeditor>
-<button *ngIf="ckeditorContent!=''"  class="button" (click)="clickButton()">Submit</button>
+<!-- <form role="form" #myForm="ngForm"> -->
+<!-- <p>{{ckeditorContent}}</p> -->
 <!-- </form> -->
 <!-- <div id="editor">
 	<p>This is the editor content.</p>
